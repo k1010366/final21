@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>購物車</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<style >
+		@import url("asset/shopping.css") ;
+	</style>
+	<script type="text/javascript">
+		var price = 0.00;
+		var price1 = 0.00;
+		var price2 = 0.00;
+
+		function jian() {
+		    var i = parseInt(document.getElementById("shang").valueOf().value) - 1;
+		    if (i <= 0) {
+		        i = 0;
+		    }
+		    document.getElementById("shang").valueOf().value = i;
+		    price1 = 338 * i;
+		    document.getElementById("yiqian").value=suan(price1);
+		    zong();
+		}
+		function jia() {
+		    var i = parseInt(document.getElementById("shang").valueOf().value) + 1;
+		    document.getElementById("shang").valueOf().value = i;
+		    price1 =338 * i;
+		    document.getElementById("yiqian").value=suan(price1);
+		    zong();
+		}
+		function jian1() {
+		    var i = parseInt(document.getElementById("shang1").valueOf().value) - 1;
+		    if (i <= 0) {
+		        i = 0;
+		    }
+		    document.getElementById("shang1").valueOf().value = i;
+		    price2 = 298 * i;
+		    document.getElementById("erqian").value=suan(price2);
+		    zong();
+		}
+		function jia1() {
+		    var i = parseInt(document.getElementById("shang1").valueOf().value) + 1;
+		    document.getElementById("shang1").valueOf().value = i;
+		    price2 = 298 * i;
+		    document.getElementById("erqian").value=suan(price2);
+		    zong();
+		}
+
+		function suan(number) {
+		    price = price1 + price2;
+		    if (isNaN(number)) {
+		        return false;
+		    }
+		    number = Math.round(number * 100) / 100;
+		    var s = number.toString();
+		    var rs = s.indexOf(".");
+		    if (rs < 0) {
+		        rs = s.length;
+		        s += ".";
+		    }
+		    while (s.length <= rs + 2) {
+		        s += "0";
+		    }
+		    return s;
+		}
+		function zong() {
+		    price = price1 + price2;
+		    if (isNaN(price)) {
+		        return false;
+		    }
+		    price = Math.round(price * 100) / 100;
+		    var s = price.toString();
+		    var rs = s.indexOf(".");
+		    if (rs < 0) {
+		        rs = s.length;
+		        s += ".";
+		    }
+		    while (s.length <= rs + 2) {
+		        s += "0";
+		    }
+		    document.getElementById("totalPrice").innerHTML=s;
+		}
+		function click()
+		{
+			alert("感謝您的購買！！");
+		}
+	</script>
+</head>
+<body>
+	<div class="top">
+		<button type="button" class="xyz" id="myBtn">登入</button>
+
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+			 
+			  <!-- Modal content -->
+			  <div class="modal-content">
+
+			    <div class="modal-header">
+			      <span class="close">&times;</span>
+			      <h2>一般會員登入</h2>
+			    </div>
+			    <div class="modal-body">
+			      
+			      <p>帳號:<input type="text" name="欄位名稱"></p>
+			      <p>密碼:<input type="text" name="欄位名稱"></p>
+			        <p>還不是會員?點此<a href="sign.html">註冊</a><p>
+			    </div>
+			    <div class="modal-footer">
+			      <button class="abc" >登入</button>
+			     
+			    </div>
+			    
+			    
+			  </div>
+
+			</div>
+
+			<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+			    modal.style.display = "none";
+			  }
+			}
+			</script>
+
+		
+		<img src="img1/logo.jpg" class="imglogo">	
+  		<div class="ch2"><a class="active" href="index.html"><p class="txthome">主頁</p></a></div>
+  		<div style="position:absolute;left:1100px;top:20px;"><a href="index.html#a"><p class="txthome">熱銷商品</p></a></div>
+  		<div style="position:absolute;left:1250px;top:0px" ><a href="member.html"><p class="txthome1">關於我們</p></a></div>
+ 		 
+ 		 <div id="menu">
+		  <ul>
+		    <li> <a href="s1.html">商品一覽</a>
+		      <ul>
+		        <li><a href="s1.html">一般造型</a></li>
+		        <li><a href="s2.html">動物造型</a></li>
+		      </ul>
+		    </li>
+		  </ul>
+		</div>
+     <div>
+      <i style='font-size:40px;position: absolute;left: 1690px;top: 30px;' class='fas'>&#xf217;</i>
+      <i style='font-size:40px;position: absolute;left: 1800px;top: 30px;' class='fas'>&#xf406;</i>
+      <p style="position:absolute;top: 60px;left: 1680px;font-size: 24px;text-decoration: none;"><a href="shoppingcar.html" style="color: black;">購物車</a></p>
+      <p style="position:absolute;top: 60px;left: 1805px;font-size: 24px;text-decoration: none;"><a href="shoppingcar.html" style="color: black;"></a></p>
+     </div>
+	</div>
+     
+     
+
+	<p style="position: absolute;top: 100px;font-size: 50px;font-weight: bold;left: 270px;">購物車</p>
+	<hr class="style-two" style="width: 98%;position: absolute;top: 210px;left: 30px;">
+	<p style="position: absolute;top: 210px;font-size: 30px;font-weight: bold;left: 480px;">產品信息</p>
+	<p style="position: absolute;top: 210px;font-size: 30px;font-weight: bold;left: 880px;">單價</p>
+	<p style="position: absolute;top: 210px;font-size: 30px;font-weight: bold;left: 1080px;">數量</p>
+	<p style="position: absolute;top: 210px;font-size: 30px;font-weight: bold;left: 1280px;">金額</p>
+
+	<div class="txt1">
+		<img src="img1/t1.jpg" alt="Forest" width="150" height="150" style="position: relative;top: 24px;left: 80px;">
+		<div class="vl" style="position: absolute;left: 240px;top: 10px;height: 175px;"></div>
+		<h2 style="position: absolute;top:10px;left: 250px; ">商品名稱：熊熊小夜燈</h2>
+		<h2 style="position: absolute;top:60px;left: 250px; ">滿399可包郵</h2>
+		<h2 style="position: absolute;top:110px;left: 250px; ">卡通，硅膠材質，usb充電，led燈光</h2>
+		<div id="zong">
+		<h1 style="position: absolute;top:55px;left: 680px; color: red;">$338</h1>
+		<div style="position: absolute;top: 75px;left: 845px;">
+		<input type="button" name="minus" value="-" onclick="jian()" style="width: 35px;height: 40px;"><input type="text" name="amount" value="1" id="shang" style="width: 60px;height: 35px; "><input type="button" name="plus" value="+" onclick="jia()"style="width: 35px;height: 40px;">
+		</div>
+			<h1 style="position: absolute;top: 	55px;left: 1065px;">$</h1>
+			<input type="text" name="price" value="338.00"id="yiqian" style="position: absolute;top: 75px;left: 1090px;width: 100px;height: 35px;color: red;font-size: 25px;">		
+	</div>
+	</div>
+	<div class="txt2">
+		<img src="img1/l4.jpg" alt="Forest" width="150" height="150" style="position: relative;top: 24px;left: 80px;">
+		<div class="vl" style="position: absolute;left: 240px;top: 10px;height: 175px;"></div>
+		<h2 style="position: absolute;top:10px;left: 250px; ">商品名稱：幽靈小夜燈</h2>
+		<h2 style="position: absolute;top:60px;left: 250px; ">滿399可包郵</h2>
+		<h2 style="position: absolute;top:110px;left: 250px; ">幽靈，硅膠材質，usb充電，白光</h2>
+		<div id="zong">
+		<h1 style="position: absolute;top:55px;left: 680px; color: red;">$298</h1>
+		<div style="position: absolute;top: 75px;left: 845px;">
+		<input type="button" name="minus" value="-" onclick="jian1()" style="width: 35px;height: 40px;"><input type="text" name="amount" value="1" id="shang1" style="width: 60px;height: 35px; "><input type="button" name="plus" value="+" onclick="jia1()"style="width: 35px;height: 40px;">
+		</div>
+			<h1 style="position: absolute;top: 	55px;left: 1065px;">$</h1>
+			<input type="text" name="price" value="298.00"id="erqian" style="position: absolute;top: 75px;left: 1090px;width: 100px;height: 35px;color: red;font-size: 25px;">
+	</div>
+	</div>
+	<div class="txt3" id="mao">
+		<h1 style="position:relative;top: 16px;left: 680px;">總價：</h1>
+		<div id="totalPrice" style="position:relative;top:-50px;left: 780px;font-size: 40px;color: red">0.00</div>
+		<button  style="background-color: red;color: white;position: absolute;top: 15px;left: 1300px;width: 110px;height: 70px;font-size: 30px;"><a href="#mao" style="color: white;text-decoration: none;">結算</a></button>
+	</div>
+
+	<div>
+		<p style="position: absolute;top: 840px;font-size: 50px;font-weight: bold;left: 270px;">結算</p>
+	<hr class="style-two" style="width: 98%;position: absolute;top: 950px;left:0px;">
+	</div>
+	
+	<div>
+		<h1 style="position: absolute;top: 960px;left: 270px;">
+			收貨人資訊
+		</h1>
+		<h2 style="position: absolute;top: 1020px;left: 270px;">名字</h2>
+		<div style="color: red; position: absolute;top: 1035px;left: 325px;">*</div>
+		<input type="text" name="username"  style="position: absolute;top: 1080px;left: 280px;width: 500px;height: 50px;">
+		<h2 style="position: absolute;top: 1130px;left: 270px;">聯絡電話</h2>
+		<div style="color: red; position: absolute;top: 1145px;left: 375px;">*</div>
+		<input type="number" style="position: absolute;top: 1190px;left: 280px;width: 240px;height: 50px;">
+		<h2 style="position: absolute;top: 1130px;left: 535px;">電子郵箱</h2>
+		<div style="color: red; position: absolute;top: 1145px;left: 645px;">*</div>
+		<input type="text" style="position: absolute;top: 1190px;left: 540px;width: 240px;height: 50px;">
+		<h2 style="position: absolute;top: 1240px;left: 270px;">地址</h2>
+		<div style="color: red; position: absolute;top: 1255px;left: 320px;">*</div>
+		<input type="text" style="position: absolute;top: 1300px;left: 280px;width: 500px;height: 50px;">
+	</div>
+	<div class="vl" style="position: absolute;left: 1030px;top: 980px;height: 375px;"></div>
+	<h2 style="position: absolute;top: 1020px;left: 1130px;">付款方式</h2>
+	<div style="color: red; position: absolute;top: 1035px;left: 1245px;">*</div>
+	<select size="1" name="sport" style="position: absolute;top: 1085px;left: 1145px;width: 240px;height: 50px;font-size: 25px;">
+		<option>貨到付款</option>
+		<option>超商繳費</option>
+		<option>郵局轉賬</option>
+		<option>信用卡</option>
+	</select>
+	<h2 style="position: absolute;top: 1180px;left: 1130px;">運送方式</h2>
+	<div style="color: red; position: absolute;top: 1200px;left: 1245px;">*</div>
+	<form action="action_page.php" style="position: absolute;top: 1240px;left: 1145px;font-size: 25px;">
+	 <input type="radio" name="sex"  checked/ >送貨上門:NT$ 80
+	 <br>
+	 <input type="radio" name="sex"  />超商取件:NT$ 60
+	 <br><br>
+	</form>
+	<select size="1" name="sport" style="position: absolute;top: 1305px;left: 1165px;width: 240px;height: 50px;font-size: 25px;">
+		<option>7-11</option>
+		<option>全家</option>
+		<option>萊爾福</option>
+	</select>
+	<hr class="style-two" style="width: 98%;position: absolute;top: 1365px;left:0px;">
+	<button  style="position: absolute;top: 1390px;left: 975px;width: 120px;height:70px;background-color: red;font-size: 25px;color: white;" onclick="click()">確認購買</button>
+
+</body>
+</html>

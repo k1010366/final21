@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<style type="text/css" media="screen">
+		@import url("asset/pr1.css") ;
+	</style>
+</head>
+<body style="background-image: url(img1/background.jpg);height: 1450px;" >
+	<div class="top">
+		<button type="button" class="xyz" id="myBtn">登入</button>
+
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+			 
+			  <!-- Modal content -->
+			  <div class="modal-content">
+
+			    <div class="modal-header">
+			      <span class="close">&times;</span>
+			      <h2>一般會員登入</h2>
+			    </div>
+			    <div class="modal-body">
+			      
+			      <p>帳號:<input type="text" name="欄位名稱"></p>
+			      <p>密碼:<input type="text" name="欄位名稱"></p>
+			        <p>還不是會員?點此<a href="sign.html">註冊</a><p>
+			    </div>
+			    <div class="modal-footer">
+			      <button class="abc" >登入</button>
+			     
+			    </div>
+			    
+			    
+			  </div>
+
+			</div>
+
+			<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+			    modal.style.display = "none";
+			  }
+			}
+			</script>
+
+		
+		<img src="img1/logo.jpg" class="imglogo">	
+  		<div class="ch2"><a class="active" href="index.html"><p class="txthome">主頁</p></a></div>
+  		<div style="position:absolute;left:1100px;top:20px;"><a href="index.html#a"><p class="txthome">熱銷商品</p></a></div>
+  		<div style="position:absolute;left:1250px;top:0px" ><a href="member.html"><p class="txthome1">關於我們</p></a></div>
+ 		 
+ 		 <div id="menu">
+		  <ul>
+		    <li> <a href="s1.html">商品一覽</a>
+		      <ul>
+		        <li><a href="s1.html">一般造型</a></li>
+		        <li><a href="s2.html">動物造型</a></li>
+		      </ul>
+		    </li>
+		  </ul>
+		</div>
+     <div>
+      <i style='font-size:40px;position: absolute;left: 1690px;top: 30px;' class='fas'>&#xf217;</i>
+      <i style='font-size:40px;position: absolute;left: 1800px;top: 30px;' class='fas'>&#xf406;</i>
+      <p style="position:absolute;top: 60px;left: 1680px;font-size: 24px;text-decoration: none;"><a href="shoppingcar.html" style="color: black;">購物車</a></p>
+      <p style="position:absolute;top: 60px;left: 1805px;font-size: 24px;text-decoration: none;"><a href="shoppingcar.html" style="color: black;"></a></p>
+     </div>
+	</div>
+     
+     
+	<div>
+		<img src="img1/l1.jpg" style="position: absolute;top: 160px;left: 600px;width: 380px;height: 380px;">
+		<p style="padding:5px 200px 5px 5px;background-color: #F5F5F5;position: absolute;top: 140px;left: 1010px;font-size: 40px;color: red;">聖誕小夜燈</p>
+		<p style="position: absolute;top: 230px;left: 1010px;font-size: 25px;">燈光從漫天大雪中緩緩流淌出來，<br>那橙色的光芒匯聚成一陣陣暖流，<br>像極了冬日裡的太陽，<br>溫暖了我們的內心。</p>
+		<p style="font-size: 35px;position:absolute;top: 360px;left: 1010px;">售價：</p>
+		<div style="color: red;position: absolute;top: 395px;left: 1110px;font-size: 35px;">$220</div>
+		<p style="font-size: 25px;position:absolute;top: 425px;left: 1015px;">庫存：15</p>
+		<button style="position: absolute;top: 481px;left: 1130px;width: 150px;height: 60px;background-color: red;color: white;font-size: 21px;">加入購物車</button>
+	</div>
+
+	<div>
+		<input type="text" placeholder="請寫些評論"  style="position: absolute;top: 580px;left: 600px;height: 240px;width: 900px;font-size:35px; ">
+		<h2 style="position: absolute;top: 830px;left: 600px;">姓名:</h2>
+		<input type="text" name="username"  style="position: absolute;top: 845px;left: 660px;width: 300px;height: 30px;">
+		<h2 style="position: absolute;top: 830px;left: 1005px;">電子郵箱:</h2>
+		<input type="text" style="position: absolute;top: 845px;left:1125px;width: 300px;height: 30px;">
+		<h2 style="position: absolute;top: 880px;left: 600px;">滿意程度:</h2>
+		
+		<form id="score_form" style="position: absolute;top: 893px;left: 708px;">
+    	<div class="star_evaluate">
+	        <input type="radio" id="scoreId_1" class="score score_1" name="score" value="1"/>
+	        <label for="scoreId_1" class="star star_1"></label>
+	        <input type="radio" id="scoreId_2" class="score score_2" name="score" value="2"/>
+	        <label for="scoreId_2" class="star star_2"></label>
+	        <input type="radio" id="scoreId_3" class="score score_3" name="score" value="3"/>
+	        <label for="scoreId_3" class="star star_3"></label>
+	        <input type="radio" id="scoreId_4" class="score score_4" name="score" value="4"/>
+	        <label for="scoreId_4" class="star star_4"></label>
+	        <input type="radio" id="scoreId_5" class="score score_5" name="score" value="5"/>
+	        <label for="scoreId_5" class="star star_5"></label>
+    </div>
+	</form>
+		<button style="position:absolute;top: 940px;left: 600px;width: 100px;height: 40px;font-size: 25px;">送出</button>
+	</div>
+	<hr style="position: absolute;top: 990px;width: 55%;left: 520px;">
+	<p style="position: absolute;top: 1005px;left: 600px;font-size: 25px;">評論內容:</p>
+	<input type="text" style="position: absolute;top: 1090px;left: 600px;height: 240px;width: 900px;font-size:35px; ">
+	 <div class="txt10">
+      <h1 style="text-align: center;">第二十二組製作</h1>
+    </div>
+</body>
+</html>
