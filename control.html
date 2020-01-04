@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>註冊</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <style>
+    @import url("asset/cn.css") ;
+    </style>
+</head>
+<body>
+<div class="top">
+		<button type="button" class="xyz" id="myBtn">登入</button>
+
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+			 
+			  <!-- Modal content -->
+			  <div class="modal-content">
+
+			    <div class="modal-header">
+			      <span class="close">&times;</span>
+			      <h2>一般會員登入</h2>
+			    </div>
+			    <div class="modal-body">
+			      
+			      <p>帳號:<input type="text" name="欄位名稱"></p>
+			      <p>密碼:<input type="text" name="欄位名稱"></p>
+			        <p>還不是會員?點此<a href="sign.html">註冊</a><p>
+			    </div>
+			    <div class="modal-footer">
+			      <button class="abc" >登入</button>
+			     
+			    </div>
+			    
+			    
+			  </div>
+
+			</div>
+
+			<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+			    modal.style.display = "none";
+			  }
+			}
+			</script>
+
+		
+		<img src="img1/logo.jpg" class="imglogo">	
+  		<div class="ch2"><a class="active" href="index.html"><p class="txthome">主頁</p></a></div>
+  		<div style="position:absolute;left:1100px;top:20px;"><a href="index.html#a"><p class="txthome">熱銷商品</p></a></div>
+  		<div style="position:absolute;left:200px;top:0px" ><a href="member.html"><p class="txthome1">關於我們</p></a></div>
+ 		 
+ 		 <div id="menu">
+		  <ul>
+		    <li> <a href="s1.html">商品一覽</a>
+		      <ul>
+		        <li><a href="s1.html">一般造型</a></li>
+		        <li><a href="s2.html">動物造型</a></li>
+		      </ul>
+		    </li>
+		  </ul>
+		</div>
+     <div>
+      <i style='font-size:40px;position: absolute;left: 1690px;top: 30px;' class='fas'>&#xf217;</i>
+      <i style='font-size:40px;position: absolute;left: 1800px;top: 30px;' class='fas'>&#xf406;</i>
+      <p style="position:absolute;top: 60px;left: 1680px;font-size: 24px;text-decoration: none;"><a href="shoppingcar.html" style="color: black;">購物車</a></p>
+      <p style="position:absolute;top: 60px;left: 1805px;font-size: 24px;text-decoration: none;"><a href="shoppingcar.html" style="color: black;"></a></p>
+     </div>
+	</div>
+     
+	</div>
+
+
+    <h1 style="position:absolute;top: 140px;left: 140px;color: #FF2626;font-size: 50px;font-weight: bold;">加入商品</h1>
+    <hr style="position: absolute;top: 230px;width: 40%;left: 80px;color:#FF2626 ">
+    <div style="height: 400px;width: 700px;background-color: white;position:absolute;top: 270px;left: 80px;"></div>
+    <button style="position: absolute;top: 720px;left: 600px;width: 180px;height: 60px; background-color: #FF2626;color: white;font-size: 25px;">加入商品</button>
+    <h1 style="position:absolute;top: 140px;left: 1140px;color: #FF2626;font-size: 50px;font-weight: bold;">刪除商品</h1>
+    <hr style="position: absolute;top: 230px;width: 40%;left: 1060px;color:#FF2626 ">
+    <form>
+      <select style="position:absolute;top: 260px;width: 400px;height: 80px;left: 1060px;background-color: #FF2626;font-size: 28px; color: white;">
+      　<option value="商品1">商品1</option>
+      　<option value="商品2">商品2</option>
+      　<option value="商品3">商品3</option>
+      </select>
+      <button style="position: absolute;top: 280px;left: 1500px;width: 180px;height: 60px; background-color: #FF2626;color: white;font-size: 25px;">刪除商品</button>
+    </form>
+    <h1 style="position:absolute;top: 410px;left: 1140px;color: #FF2626;font-size: 50px;font-weight: bold;">管理會員</h1>
+    <hr style="position: absolute;top: 510px;width: 40%;left: 1060px;color:#FF2626 ">
+    <form>
+      <select style="position:absolute;top: 550px;width: 400px;height: 80px;left: 1060px;background-color: #FF2626;font-size: 28px; color: white;">
+      　<option value="會員1">會員1</option>
+      　<option value="會員2">會員2</option>
+      　<option value="會員3">會員3</option>
+      </select>
+      <div style="height: 240px;width: 500px;background-color: white;position:absolute;top: 650px;left: 1060px;">
+        <p style="position: absolute;top: 5px;font-size: 35px;">帳號：</p>
+        <p style="position: absolute;top: 65px;font-size: 35px;">密碼：</p>
+        <p style="position: absolute;top: 125px;font-size: 35px;">E-mail：</p>
+      </div>
+      <button style="position: absolute;top: 820px;left: 1600px;width: 180px;height: 60px; background-color: #FF2626;color: white;font-size: 25px;">刪除會員</button>
+    <div class="txt10">
+      <h1>第二十二組製作</h1>
+    </div>
+    
+</body>
+</html>
